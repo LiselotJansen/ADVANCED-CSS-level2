@@ -1,0 +1,67 @@
+html,
+body {
+  background-color: #c3cfe2;
+}
+
+.project-container {
+  margin: 20px;
+  display: grid;
+  grid-gap: 20px;
+}
+
+.project {
+  position: relative;
+  width: 100%;
+}
+.project__image {
+  border-radius: 15px;
+  opacity: 1;
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: 250ms ease-in;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+}
+.project--overlay {
+  border-radius: 15px;
+  width: 100%;
+  height: 100%;
+  background-color: #313752;
+  transition: 250ms ease-in;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.project:hover .project__image {
+  opacity: 0;
+}
+.project:hover .project--overlay {
+  opacity: 1;
+}
+
+.btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 16px;
+  padding: 12px 24px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+/* MEDIA QUERIES */
+@media (min-width: 600px) {
+  .project-container {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (min-width: 1024px) {
+  .project-container {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}/*# sourceMappingURL=styles.css.map */
